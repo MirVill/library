@@ -13,10 +13,11 @@ const dbOptions = {
   password: 'YDPvdQCHwSatKBpsw7ff',
   database: 'ba6ifjfaweakqht1sbsi'
 }
+const whiteList = ['https://elated-hermann-4e4fa0.netlify.app/?titulo=&autor=&edicion=2021'];
 //Middlewares----------------------------------------
 app.use(myconn(mysql, dbOptions, 'single'));
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin: whiteList}));
 
 //Routes---------------------------------------------
 app.get('/', (req, res)=> {
