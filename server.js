@@ -13,7 +13,7 @@ const dbOptions = {
   password: 'YDPvdQCHwSatKBpsw7ff',
   database: 'ba6ifjfaweakqht1sbsi'
 }
-const whiteList = ['https://elated-hermann-4e4fa0.netlify.app/?titulo=&autor=&edicion=2021'];
+const whiteList = ['https://library-m.netlify.app/'];
 //Middlewares----------------------------------------
 app.use(myconn(mysql, dbOptions, 'single'));
 app.use(express.json());
