@@ -17,7 +17,7 @@ const whiteList = ['https://library-m.netlify.app/'];
 //Middlewares----------------------------------------
 app.use(myconn(mysql, dbOptions, 'single'));
 app.use(express.json());
-app.use(cors({origin: whiteList}));
+app.use(cors({credentials:true, origin: true}));
 
 //Routes---------------------------------------------
 app.get('/', (req, res)=> {
